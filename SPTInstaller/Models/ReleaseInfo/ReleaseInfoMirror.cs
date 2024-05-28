@@ -2,6 +2,6 @@
 
 public class ReleaseInfoMirror
 {
-    public string browser_download_url { get; set; }
+    public string DownloadUrl { get; set; }
     public string Hash { get; set; }
 }
