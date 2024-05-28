@@ -14,13 +14,13 @@ public static class PreCheckHelper
     {
         // We can't detect the installed path on non-Windows
         if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-            return null;
+            return string.Empty;
         
-        var uninstallStringValue = Registry.LocalMachine.OpenSubKey(registryInstall, false)
+        /*var uninstallStringValue = Registry.LocalMachine.OpenSubKey(registryInstall, false)
             ?.GetValue("InstallLocation");
-        var info = (uninstallStringValue is string key) ? new DirectoryInfo(key) : null;
+        var info = (uninstallStringValue is string key) ? new DirectoryInfo(key) : null;*/
         
-        return info?.FullName;
+        //return info?.FullName;
     }
     
     public static Result DetectOriginalGameVersion(string gamePath)

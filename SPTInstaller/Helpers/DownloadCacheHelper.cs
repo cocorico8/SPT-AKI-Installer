@@ -12,7 +12,7 @@ public static class DownloadCacheHelper
     public static string CachePath = Path.Join(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
         "spt-installer/cache");
     
-    public static string ReleaseMirrorUrl = "https://spt-releases.modd.in/release.json";
+    public static string ReleaseMirrorUrl = "https://api.github.com/repos/cocorico8/SPT.Stable-release/releases/latest";
     public static string PatchMirrorUrl = "https://slugma.waffle-lord.net/mirrors.json";
     public static string InstallerUrl = "https://ligma.waffle-lord.net/SPTInstaller.exe";
     public static string InstallerInfoUrl = "https://ligma.waffle-lord.net/installer.json";

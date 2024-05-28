@@ -73,10 +73,10 @@ public class DownloadTask : InstallerTaskBase
         // Note that GetOrDownloadFileAsync handles the cached file hash check, so we don't need to check it first
         foreach (var mirror in _data.ReleaseInfo.Mirrors)
         {
-            SetStatus("Downloading SPT", mirror.DownloadUrl, progressStyle: ProgressStyle.Indeterminate);
+            SetStatus("Downloading SPT", mirror.browser_download_url, progressStyle: ProgressStyle.Indeterminate);
             
             _data.SPTZipInfo =
-                await DownloadCacheHelper.GetOrDownloadFileAsync("SPT", mirror.DownloadUrl, progress, mirror.Hash);
+                await DownloadCacheHelper.GetOrDownloadFileAsync("SPT", mirror.browser_download_url, progress, mirror.Hash);
             
             if (_data.SPTZipInfo != null)
             {
